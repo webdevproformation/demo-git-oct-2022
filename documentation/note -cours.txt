@@ -274,8 +274,12 @@ git merge mise-en-forme
 git branch -d mise-en-forme # supprimer la branch que l'on vient de fusionner 
 
 cas pratique 
+- verifier ai aucun doc à valider
+git status
 - créer un nouvelle branch exo1 
+git branch exo1
 - positionner dessus
+git checkout exo1
 - réaliser 3 add / commit sur cette branch exo1
 - revenir sur la branch principale master
 - fusionner la branche master avec la branch exo1 
