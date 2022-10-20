@@ -1,0 +1,247 @@
+support :
+https://formation.webdevpro.net/git/
+login : git 
+password : git
+
+
+Projet de formulaire avec vérifications 
+
+créer 2 dossiers 
+
+1 assets => css / javascript / images
+2 documentation => note de cours 
+
+créer un fichier à la racine du projet qui s'appelle index.html
+
+=> git pour pouvoir versionner (suivre les versions / les évolutions de notre projet en HTML / CSS / JS)
+
+------------
+
+commande qui permet de créer un dépôt / repository 
+dossier local qui va contenir tous les évolutions de notre projet 
+Attention, il faut saisir cette commande en choisissant le PATH de la racine du projet que l'on veut suivre 
+
+
+git init
+
+Initialized empty Git repository in C:/Users/stagiaire/Desktop/git/.git/
+
+dossier .git (dossier caché par défaut)
+stocker les différentes versions de votre projet 
+on ne manipule pas le contenu de ce dossier !! 
+
+-------------
+
+git config --global user.name "Malik H"
+git config --global user.email "malik.h@webdevpro.net"
+git config -l
+
+---- rdv 10h35 bon café @ toute suite !!!!
+
+=> modifier le fichier index.html ! Enter
+
+lancer le versionning => suivre l'avancer de tous les fichiers dans le dossier git 
+
+----------------
+
+git status
+
+On branch master => vous êtes sur la branch master ....
+
+No commits yet => pour l'instant il n'y a pas d'enregistrement commité dans le dossier .git
+
+Untracked files: => fichier non suivi 
+  (use "git add <file>..." to include in what will be committed)
+  conseil => si tu veux suivre des fichiers => proposition git add <file>
+        documentation/
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+------------------
+
+git add index.html
+
+------------------
+
+git status
+
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        documentation/
+
+----------------------
+
+git commit -m "creation page index.html"
+
+[master (root-commit) a2879c1] creation page index.html
+ 1 file changed, 12 insertions(+) 1 fichier qui a stocké dans le .git 
+ create mode 100644 index.html
+
+ chmod 000000
+
+----------------------
+cls / clear
+
+git status
+
+différence entre le fichier index.html (.git) et le fichier index.html (dans le projet)
+
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+
+git add index.html 
+
+(use "git restore --staged <file>..." to unstage)
+git commit -m "ajouter h1 + form"
+
+----------------
+
+créer un fichier style.css 
+modifier le fichier index.html <link rel="stylesheet" href="assets/style.css">
+
+git add index.html assets/style.css
+
+git commit -m "ajout du fichier style.css" 
+
+----------------------
+
+cas pratique :
+
+modifier le fichier index.html 
+ajouter deux input dans le formulaire 
+
+modifier le fichier style.css 
+styliser les deux input 
+
+=> git add des deux fichiers
+=> commit pour enregistrer ces modifications dans .git 
+
+
+git add index.html assets/style.css 
+
+git commit -m "ajout d'input dans le formulaire"
+
+git status
+
+---
+modifie / créer un fichier / enregistrement
+
+git add fichier1 fichier2 ...
+git commit -m "message"
+
+git status 
+
+
+=> gitk > outil visuel qui permet d'avoir en détails
+QUI 
+QUAND 
+POURQUOI ?? vient des git commit -m "message"
+QU'est ce qui a été modifié ? 
+
+Git va stocker les modifications de manière incrémentale
+
+<div>
+</div>
+
+<div>
+    <p>un peu de texte </p> => stocker dans le dossier .git uniquement le <p> et son contenu ajouté
+</div>
+
+=> copie incrémentale copie que ce qui est nouveau par contre ce qui est ancien n'est pas copié à nouveau dans le nouveau commit 
+
+
+commande qui permet de faire 
+git add <fichier>
+git commit -m "message"
+
+git commit -a -m "message"
+git commit -am "message"
+
+que sur les fichiers trackés (ajouté dans le .git )
+
+git add assets/script.js 
+git commit -m "ajout de script.js"
+
+
+
+-----------------
+
+git add fichier1 fichier2 
+
+git add *.css 
+git add *.(css|php|js) 
+
+git add --all 
+git add -A
+
+-----------------
+1 modifier le fichier .html
+ajouter un champ textarea dans le formulaire 
+appeler le fichier script.js via la balise <script src="">
+
+2 modifier le css pour styliser le textarea
+
+3 modifier le fichier script.js ajouter un écouteur evénement lors que l'on soumet un formaulaire
+
+4 enregistrer toutes ces modifications dans .git (repository)
+
+
+gitk => outil visuel qui permet d'avoir les différents commit réalisés
+
+git log
+
+commit 6c83c0c752f344224e9aa307553abbc6f6e8e009
+Author: Malik H <malik.h@webdevpro.net>
+Date:   Thu Oct 20 10:53:59 2022 +0200
+
+    ajouter h1 + form
+
+git log --oneline
+
+8deaee9 (HEAD -> master) ajout de js
+22a8a56 ajout de script.js
+0aea798 ajout input email
+69842c0 ajout d'input dans le formulaire
+8b7b0d4 ajout du fichier style.css
+6c83c0c ajouter h1 + form
+a2879c1 creation page index.html
+
+
+git log --oneline -p assets/script.js
+
+
+revenir dans le passé 
+
+git checkout <fichier>=> revenir au dernier commit si le fichier n'a été commit 
+
+git log --oneline 
+git revert 69842c0 
+conflit à résoudre
+git add --all
+git commit -m "message "
+
+git log --oneline
+get reset 8b7b0d4 --hard
+
+voir un projet dans un état précédent 
+git log --oneline
+git checkout <id_commit>
+juste pour regarder => ne pas modifier les fichiers / copier coller 
+git checkout master / main (remet au dernier commit de la branch master)
+
+---------------------
+
+monde parallèle à la branch principale 
+
+branch 
+
+
