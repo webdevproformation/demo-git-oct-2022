@@ -249,6 +249,21 @@ git add -A
 git commit -m "fin"
 git status 
 
-git branch mise-en-forme
-git branch
-git checkout  mise-en-forme
+git branch mise-en-forme # créer la branch
+git branch # liste des branch
+git checkout  mise-en-forme # se positionner sur la branch mise en forme 
+
+modifier vos fichiers 
+
+git add --all 
+git commit -m "...."
+
+modifier vos fichiers 
+
+git add --all 
+git commit -m "...."
+
+modifier vos fichiers 
+
+git add --all 
+git commit -m "...."
