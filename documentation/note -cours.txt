@@ -286,3 +286,11 @@ git checkout -b exo1
 - revenir sur la branch principale master
 - fusionner la branche master avec la branch exo1 
 - supprimer la branch exo1
+
+git branch conflit 
+git checkout conflit 
+
+git checkout master 
+
+.gitignore
+
