@@ -267,3 +267,16 @@ modifier vos fichiers
 
 git add --all 
 git commit -m "...."
+
+git checkout master
+git merge mise-en-forme
+
+git branch -d mise-en-forme # supprimer la branch que l'on vient de fusionner 
+
+cas pratique 
+- créer un nouvelle branch exo1 
+- positionner dessus
+- réaliser 3 add / commit sur cette branch exo1
+- revenir sur la branch principale master
+- fusionner la branche master avec la branch exo1 
+- supprimer la branch exo1
