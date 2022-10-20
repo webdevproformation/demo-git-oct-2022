@@ -244,4 +244,9 @@ monde parallèle à la branch principale
 
 branch 
 
+git status 
+git add -A 
+git commit -m "fin"
+git status 
+
 
