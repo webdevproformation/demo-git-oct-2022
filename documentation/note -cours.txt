@@ -280,6 +280,8 @@ git status
 git branch exo1
 - positionner dessus
 git checkout exo1
+
+git checkout -b exo1
 - réaliser 3 add / commit sur cette branch exo1
 - revenir sur la branch principale master
 - fusionner la branche master avec la branch exo1 
