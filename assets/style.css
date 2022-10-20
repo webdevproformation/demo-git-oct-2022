@@ -7,3 +7,7 @@
     box-sizing: border-box; /* par défaut width : 100% 40px cette règle permet d'inclure les 40px dans le 100% */
     border: 2px solid blue;
 }
+
+p{
+    color :red ;
+}
