@@ -249,4 +249,6 @@ git add -A
 git commit -m "fin"
 git status 
 
-
+git branch mise-en-forme
+git branch
+git checkout  mise-en-forme
